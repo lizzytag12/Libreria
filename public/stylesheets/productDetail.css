@@ -1,0 +1,313 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body.product-detail{
+    background-color: #FFE7E7;
+}
+
+/*                       MAIN            */
+
+main.product-detail__main{
+
+    background-color: var(--colorMainHome);
+    padding-bottom: 40px;
+    font-family: "Cinzel";
+}
+
+
+div.container-button-product-detail{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    
+}
+/* Boton volver */
+.a_button{
+
+    padding: 1.2em 1.5em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-right: 30px;
+    margin-top: 15px;
+    text-decoration: none;
+   
+}
+.a_button:hover{
+        background-color:#EFFEFA ;
+        box-shadow: 0px 15px 20px #54BAB9;
+        color: rgb(7, 7, 7);
+        transform: translateY(-7px);
+}
+.a_button:active {
+       transform: translateY(-1px);
+}
+
+/* CONTENEDOR PRODUCTO */
+.product-detail-product{ /* contenedor imagen */
+
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   margin: 2em 0em 1em;
+   
+
+}
+
+/* IMAGEN */
+
+.product-detail-portada {
+    width: 33vh;
+    height: 50vh;
+    background: white;
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+.shadow_detail{
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+    0 0  0 2px rgb(190, 190, 190),
+    0.3em 0.3em 1em rgba(0,0,0,0.3);
+
+}
+/* PRECIO ANTERIOR */
+
+.precio_anterior{
+    display: block;
+    font-size: 20px;
+    color: red;
+    text-decoration: line-through;
+    text-align: right;
+    margin-right: 4.5em;
+    font-family: "Kameron";
+}
+  /* PRECIO */
+ 
+span.precio {    
+
+    display: block;
+    font-size: 25px;
+    color: green;
+    text-align: right;
+    margin-right: 3.5em;
+    font-family: "Kameron";
+}
+
+.añadir {  /* contenedor de añadir */
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+   
+   
+}
+    /* BUTTON AÑADIR */
+ .product-detail-añadir{  
+    position: relative;
+    padding: 7px 10px;
+    font-family:  'Orelega one';
+    margin: 1em 4em;
+    float: left;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #FFF;
+    text-decoration: none;
+    background-color: #2ecc71;
+    border: none;
+    border-bottom: 5px solid #27ae60;
+    text-shadow: 0px -2px #27ae60;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+   
+    
+} 
+
+.product-detail-añadir:hover , .product-detail-añadir:active{
+    -webkit-transform: translate(0px,5px);
+    -ms-transform: translate(0px,5px);
+    transform: translate(0px,5px);
+    border-bottom: 1px solid #2ecc71;
+
+}
+    
+/*ICONO CARRITO */
+.product-detail-añadir i{  
+    
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    
+   
+} 
+
+ /*  titulo */
+.product-detail-description h1{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin:2em 1em 2em;
+
+    letter-spacing: 4px;
+    text-shadow: -11px -11px 3px rgba(148, 146, 150, 0.36);
+}
+/*   sinopsis */
+.product-detail-description h3 {  
+    color: black;
+    text-align: left;
+    padding-bottom: 16px;
+    padding-left: 45px;
+    font-size: 15px;
+    
+}
+/* descripcion */
+.product-detail-description p{ 
+    color: black;
+    padding: 0px 45px 25px 45px;
+    font-size: 12px;
+    line-height: 1.8em;
+}
+.leer_mas{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    margin-left: 3em;
+}
+ .parrafo-ver-mas{ /* descripcion */
+ display: none;
+    
+}
+.home__main__up a i{
+
+    font-size: 40px;
+}
+
+.home__main__up{ /*  botton de scroll up */
+
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    font-size: 4rem;
+}
+
+/* TABLET */
+
+@media(min-width:768px) {
+    
+    body.product-detail{
+        background-color: var(--colorMainHome);
+
+    }
+    .product-detail__main{
+
+        margin: 0em 5em;
+    }
+   .container-product-detail-portada{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   }
+   .product-detail-portada {
+    width: 25vh;
+    height: 40vh;
+    margin-left: 25px;
+    
+   }
+   .cart_precios{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+
+   }
+   .precio_anterior {
+    margin-right: 2em;
+    font-family: "Kameron";
+   }
+   span.precio {
+    margin-right: 1.5em;
+   
+   }
+   .product-detail-añadir {
+    padding: 15px 15px;
+    font-family: 'Orelega one';
+    margin: 0em 0em;
+    
+   }
+   .product-detail-description h1 {
+    font-size: 25px;
+    
+    }
+   .product-detail-description h3 {
+    padding-left: 5em;
+    font-size: 18px;
+   }
+   .product-detail-description p {
+    font-size: 18px;
+    padding: 2em 5em 1em 5em;
+    
+   }
+
+}
+
+@media(min-width:1024px){
+
+    .product-detail__main{
+
+        margin: 0em 7em;
+    }
+    
+    .container-product-detail-portada {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-detail-portada {
+        width: 30vh;
+        height: 47vh;
+        margin-left: 25px;
+    }
+    .cart_precios {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: 3em;
+    }
+    span.precio {
+        font-size: 35px;
+
+    }
+    .precio_anterior {
+        font-size: 25px;
+    }
+    .product-detail-description{
+        margin:0em 5em;
+    }
+    .product-detail-añadir {
+        padding: 16px 24px;
+    }
+
+    .product-detail-añadir {
+        font-size: 25px;
+        
+    }
+    .product-detail-description h3 {
+        padding-left: 4em;
+    }
+    .product-detail-description p {
+        
+        padding: 2em 4em 2em ;
+    }
+    .leer_mas {
+        margin-left: 10em;
+    }
+}
